@@ -63,14 +63,47 @@ const Home = () => {
                 </p>
               </div>
 
-              <div style={{background:""}} >
-              <div style={{background:"", borderBottom:"1px solid #DADDD5", borderBottomWidth:"thin", margin:"0px 20px 10px 20px", padding:"0px 0px 5px 0px"}}>
-              <div style={{background:"", display:"flex", flexDirection:"row", marginLeft:20, position:"absolute"}}>
-16 comments 6 shares
-                </div>
-                <div style={{background:"", display:"flex", flexDirection:"row-reverse", marginRight:20, marginLeft:20}}>
-16 comments 6 shares
-                </div>
+              <div style={{ background: "" }}>
+                <div
+                  style={{
+                    background: "",
+                    borderBottom: "1px solid #DADDD5",
+                    borderBottomWidth: "thin",
+                    margin: "0px 20px 10px 20px",
+                    padding: "0px 0px 5px 0px"
+                  }}
+                >
+                  <div
+                    style={{
+                      background: "",
+                      display: "flex",
+                      flexDirection: "row",
+                      marginLeft: 20,
+                      position: "absolute"
+                    }}
+                  >
+                    <span
+                      style={{
+                        display: "flex",
+                        flexDirection: "row"
+                      }}
+                    >
+                      <i className="material-icons blue-text">thumb_up</i>
+                      <i className="material-icons red-text">favorite</i>
+                      <i className="material-icons blue-text">mood</i>
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      background: "",
+                      display: "flex",
+                      flexDirection: "row-reverse",
+                      marginRight: 20,
+                      marginLeft: 20
+                    }}
+                  >
+                    16 comments 6 shares
+                  </div>
                 </div>
               </div>
 
@@ -84,7 +117,7 @@ const Home = () => {
               >
                 <a href="#asd" onClick={e => onCommentButtonPressed(e)}>
                   <span style={{ position: "absolute" }}>
-                    <i className="material-icons">comment</i>
+                    <i className="material-icons">thumb_up</i>
                   </span>
                   <span style={{ marginLeft: 30 }}>Like</span>
                 </a>
