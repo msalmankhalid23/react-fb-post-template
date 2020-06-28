@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Home = () => {
   let data = ["abc", "cde"];
+  const [comments, setComments] = useState(["c1", "c2"]);
 
   const onCommentButtonPressed = event => {
     console.log("pressed");
@@ -47,7 +48,7 @@ const Home = () => {
             </div>
             <br />
             <div style={{ flex: 1, background: "", marginTop: "70px" }}>
-              <span class="card-title">
+              <span className="card-title">
                 Enjoy Life! No matter what you have!!
               </span>
               <div className="card-image" style={{}}>
@@ -56,13 +57,11 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1545155277-5d5075713c86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
                 />
               </div>
-
               <div className="card-content">
                 <p style={{ fontSize: "bold" }}>
                   This is the life. Enjoy every bit of it. #Sand #Enjoy #life
                 </p>
               </div>
-
               <div style={{ background: "" }}>
                 <div
                   style={{
@@ -106,7 +105,6 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-
               <div
                 style={{
                   background: "",
@@ -136,6 +134,23 @@ const Home = () => {
                   <span style={{ marginLeft: 30 }}>Share</span>
                 </a>
               </div>
+              {comments.length > 0
+                ? comments.map(c => {
+                    return <div>{c}</div>;
+                  })
+                : ""}
+
+              <form
+                onSubmit={e => {
+                  e.preventDefault();
+                  console.log(e.target[0].value);
+                  const val = e.target[0].value;
+                  setComments(val);
+                  console.log(comments);
+                }}
+              >
+                <input type="text" placeholder="add a comment" />
+              </form>
             </div>
           </div>
         );
